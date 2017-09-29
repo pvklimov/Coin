@@ -6,11 +6,13 @@ import assets as ast
 class TestStockClass(object):
     """Class for testing the Stock class"""
 
-    ticker = 'ABC'
-    time = [0, 1, 2, 3]
-    value = [3]*len(time)
+    @classmethod
+    def setup_class(cls):
+        cls.ticker = 'ABC'
+        cls.time = [0, 1, 2, 3]
+        cls.value = [3]*len(cls.time)
 
-    stock_inst = ast.Stock(ticker, time, value)
+        cls.stock_inst = ast.Stock(cls.ticker, cls.time, cls.value)
 
     def test_attributes(self):
         assert self.stock_inst.ticker == self.ticker
