@@ -1,9 +1,10 @@
 """General utilities"""
 
 import quandl
+import os
 
-API_KEYS_DIR = ''
-API_KEYS_FILE = 'api_keys.rtf'
+API_KEYS_DIR = os.path.dirname(os.path.realpath(__file__))
+API_KEYS_FILE = '/api_keys.rtf'
 
 
 def get_api_key(directory=API_KEYS_DIR,
