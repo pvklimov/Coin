@@ -11,7 +11,6 @@ class TestStockClass(object):
         cls.ticker = 'ABC'
         cls.time = [0, 1, 2, 3]
         cls.value = [3]*len(cls.time)
-
         cls.stock_inst = ast.Crypto(cls.ticker, cls.time, cls.value)
 
     def test_attributes(self):
