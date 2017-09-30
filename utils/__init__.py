@@ -1,7 +1,7 @@
 """General utilities"""
 
-API_KEYS_DIR=''
-API_KEYS_FILE='api_keys.rtf'
+API_KEYS_DIR = ''
+API_KEYS_FILE = 'api_keys.rtf'
 
 
 def get_api_key(directory=API_KEYS_DIR,
@@ -12,7 +12,7 @@ def get_api_key(directory=API_KEYS_DIR,
     It is assumed that API keys are stored in directory/filename: 
     
     Assumed file format:
-    
+
     ***** TEXT START *****
     <source> <API key>
     <source 2> <API key>
