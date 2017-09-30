@@ -35,7 +35,7 @@ class AssetBaseClass(metaclass=abc.ABCMeta):
         pass
 
 
-class Stock(AssetBaseClass):
+class Crypto(AssetBaseClass):
     def __init__(self, ticker, time, value):
         super().__init__(ticker, time, value)
 
@@ -50,3 +50,4 @@ class Stock(AssetBaseClass):
 
     def save_data(self):
         return NotImplementedError()
+
