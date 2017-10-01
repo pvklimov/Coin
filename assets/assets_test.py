@@ -9,14 +9,9 @@ class TestStockClass(object):
     @classmethod
     def setup_class(cls):
         cls.ticker = 'ABC'
-        cls.time = [0, 1, 2, 3]
-        cls.value = [3]*len(cls.time)
-        cls.stock_inst = ast.Crypto(cls.ticker, cls.time, cls.value)
 
     def test_attributes(self):
         assert self.stock_inst.ticker == self.ticker
-        assert self.stock_inst.time == self.time
-        assert self.stock_inst.value == self.value
 
     def test_import_data(self):
         _ = self.stock_inst.import_data()
