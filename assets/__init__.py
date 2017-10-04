@@ -38,8 +38,12 @@ class AssetBaseClass(metaclass=abc.ABCMeta):
 
 
 class Crypto(AssetBaseClass):
-    def __init__(self, ticker, raw_data=None, clean_data=None):
+    def __init__(self,
+                 ticker,
+                 raw_data=None,
+                 clean_data=None):
         super().__init__(ticker)
+
         self.raw_data = {} if raw_data is None else raw_data
         self.clean_data = None if clean_data is None else clean_data
 
@@ -60,7 +64,7 @@ class Crypto(AssetBaseClass):
             market (str): Market to get data from.
             base (str): Base currency to obtain data for.
             code (str): Code to extract data for.
-            type (str): Data type to return.
+            type (str): Data type to return. Acceptable types are 'numpy'.
 
         Return:
             data (variable type): Raw data. See datatype Arg for type info.
@@ -105,9 +109,9 @@ class Crypto(AssetBaseClass):
         """
         return NotImplementedError()
 
-    def load_data(self, absolute_path):
+    def load_data(self, absolute_path=None):
         return NotImplementedError()
 
-    def save_data(self, absolute_path):
+    def save_data(self, absolute_path=None):
         return NotImplementedError()
 
